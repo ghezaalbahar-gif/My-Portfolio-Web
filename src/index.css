@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --color-ink: #050505;
+  --color-body: #141414;
+  --color-soft: #a3a3a3;
+  --color-card: #fafafa;
+  --color-pill: #f7f7f7;
+  --color-hairline: rgba(5, 5, 5, 0.1);
+  --color-footer-line: rgba(255, 255, 255, 0.12);
+  --color-status: #0ea43b;
+  --animate-ticker: ticker 32s linear infinite;
+  --animate-ticker-reverse: ticker-reverse 36s linear infinite;
+}
+
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ticker-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll-triggered entrance (matches the reference's subtle fade-up) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/*
+ * Infinite chains. The track holds N identical groups and shifts by exactly one
+ * group width per loop, so the seam is invisible at any item count.
+ */
+.marquee {
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+
+.marquee[data-direction='right'] .marquee-track {
+  animation-direction: reverse;
+}
+
+.marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--marquee-gap, 24px);
+  padding-right: var(--marquee-gap, 24px);
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-100% / var(--marquee-copies, 2)), 0, 0);
+  }
+}
+
+/* Soft edges so the chain fades out instead of being cut off */
+.marquee-fade {
+  --mask-edge: 13%;
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) var(--mask-edge),
+    rgba(0, 0, 0, 1) 82%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.marquee::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .marquee {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  .marquee-fade {
+    --mask-edge: 0%;
+  }
+}
+
+@import "tailwindcss";
