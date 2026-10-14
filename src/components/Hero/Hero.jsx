@@ -12,7 +12,7 @@ const covers = projects.slice(0, 4).map((project) => ({
 
 export default function Hero() {
   return (
-    <section className="flex min-h-[92vh] flex-col items-center justify-center gap-12 pb-16 pt-32 md:gap-[72px] md:pt-44 xl:min-h-screen xl:gap-[88px] xl:pb-[124px] xl:pt-[210px]">
+    <section className="flex min-h-[92vh] flex-col items-center justify-center gap-12 pb-16 pt-16 md:gap-[72px] xl:min-h-screen xl:gap-[88px] xl:pb-[124px] xl:pt-[124px]">
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6">
         <div className="mx-auto flex max-w-[720px] flex-col items-center gap-7 text-center md:gap-8">
           <Reveal>
@@ -47,28 +47,29 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mt-14 w-full md:mt-20 xl:mt-[72px]">
-        <div aria-hidden="true" className="hidden w-full md:block">
-          <Marquee
-            items={covers}
-            getKey={(tile) => tile.key}
-            gap={24}
-            speed={42}
-            fade
-            className="h-[300px] xl:h-[412px]"
-            renderItem={(tile) => (
-              <img
-                src={tile.cover}
-                alt=""
-                width="1016"
-                height="938"
-                draggable="false"
-                loading="lazy"
-                className="h-[300px] w-auto max-w-none rounded-2xl object-contain xl:h-[412px] xl:rounded-[16px]"
-              />
-            )}
-          />
-        </div>
+      <div
+        aria-hidden="true"
+        className="hidden w-full md:mt-20 md:block xl:mt-[72px]"
+      >
+        <Marquee
+          items={covers}
+          getKey={(tile) => tile.key}
+          gap={24}
+          speed={42}
+          fade
+          className="h-[300px] xl:h-[412px]"
+          renderItem={(tile) => (
+            <img
+              src={tile.cover}
+              alt=""
+              width="1016"
+              height="938"
+              draggable="false"
+              loading="lazy"
+              className="h-[300px] w-auto max-w-none rounded-2xl object-contain xl:h-[412px] xl:rounded-[16px]"
+            />
+          )}
+        />
       </div>
     </section>
   )
