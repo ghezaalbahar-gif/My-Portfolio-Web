@@ -7,7 +7,7 @@ export const profile = {
   roleExtra: 'aspiring UI/UX Designer',
   location: 'Kabul, Afghanistan',
   locationShort: 'Based in Kabul · AFG',
-  avatar: asset('/images/about/portrait.jpg'),
+  avatar: asset('/images/about/portrait.webp'),
   email: 'ghezaal.bahar@gmail.com',
   socials: [
     { label: 'GitHub', href: 'https://github.com/ghezaalbahar-gif' },

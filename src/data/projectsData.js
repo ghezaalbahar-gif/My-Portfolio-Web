@@ -7,7 +7,7 @@ const rawProjects = [
     category: 'Web design',
     description:
       'A modern, responsive website inspired by Nexor, featuring a clean design, smooth scrolling animations, and elegant layouts. Built with React and Tailwind CSS to deliver a seamless and engaging user experience.',
-    cover: "/images/nexor/cover.png",
+    cover: "/images/nexor/cover.webp",
     liveUrl: '',
     liveLabel: 'View live site',
     meta: [
@@ -55,9 +55,9 @@ const rawProjects = [
       'I improved my React and Tailwind CSS skills, learned to build reusable components, and gained experience in responsive design, smooth animations, and recreating modern website layouts.',
     ],
     images: [
-      '/images/nexor/1.png',
-      '/images/nexor/2.png',
-      '/images/nexor/3.png',
+      '/images/nexor/1.webp',
+      '/images/nexor/2.webp',
+      '/images/nexor/3.webp',
     ],
   },
   {
@@ -66,7 +66,7 @@ const rawProjects = [
     category: 'Team project',
     description:
       'EAPRO Solar Energy is a modern, responsive website showcasing solar energy solutions, including solar panels, inverters, and sustainable power systems. The project highlights clean energy, innovative technology, and eco-friendly solutions for homes and businesses.',
-    cover: '/images/eapro-solar-energy/cover.png',
+    cover: '/images/eapro-solar-energy/cover.webp',
     liveUrl: 'https://ghezaalbahar-gif.github.io/Eapro-Solar-Energy/',
     liveLabel: 'View live site',
     meta: [
@@ -112,9 +112,9 @@ const rawProjects = [
       'This project taught me how real products get built: through communication, compromise, and shared standards. My technical skills grew, but my collaboration skills grew even more.',
     ],
     images: [
-      '/images/eapro-solar-energy/1.png',
-      '/images/eapro-solar-energy/2.png',
-      '/images/eapro-solar-energy/3.png',
+      '/images/eapro-solar-energy/1.webp',
+      '/images/eapro-solar-energy/2.webp',
+      '/images/eapro-solar-energy/3.webp',
       
     ],
   },
@@ -124,7 +124,7 @@ const rawProjects = [
     category: 'Learning practice',
     description:
       'A website recreated for learning and frontend practice — rebuilding an existing design to sharpen my CSS and layout skills.',
-    cover: '/images/zohco-eco-friendly/cover.png',
+    cover: '/images/zohco-eco-friendly/cover.webp',
     liveUrl: 'https://ghezaalbahar-gif.github.io/Zohco-Eco-Friendly/',
     liveLabel: 'View live site',
     meta: [
@@ -170,9 +170,9 @@ const rawProjects = [
       'This recreation sharpened my attention to detail more than any tutorial could. I learned to read designs like a developer and to spot the small decisions that make a layout feel professional.',
     ],
     images: [
-      '/images/zohco-eco-friendly/1.png',
-      '/images/zohco-eco-friendly/2.png',
-      '/images/zohco-eco-friendly/3.png',
+      '/images/zohco-eco-friendly/1.webp',
+      '/images/zohco-eco-friendly/2.webp',
+      '/images/zohco-eco-friendly/3.webp',
       
     ],
   },
@@ -182,7 +182,7 @@ const rawProjects = [
     category: 'Team project',
     description:
       'A responsive website project built with React.js, focusing on a clean user interface and reusable components.',
-    cover: '/images/netlinks-landing-page/cover.png',
+    cover: '/images/netlinks-landing-page/cover.webp',
     liveUrl: 'https://ghezaalbahar-gif.github.io/Netlinks-React.js-project/',
     liveLabel: 'View live site',
     meta: [
@@ -228,9 +228,9 @@ const rawProjects = [
       'Working on the Netlinks project helped me strengthen my React.js and frontend development skills. I gained practical experience in building responsive layouts, organizing code into reusable components, and improving the overall user experience.',
     ],
     images: [
-      '/images/netlinks-landing-page/1.png',
-      '/images/netlinks-landing-page/2.png',
-      '/images/netlinks-landing-page/3.png',
+      '/images/netlinks-landing-page/1.webp',
+      '/images/netlinks-landing-page/2.webp',
+      '/images/netlinks-landing-page/3.webp',
       
     ],
   },
@@ -240,7 +240,7 @@ const rawProjects = [
     category: 'Web practice',
     description:
       'Designer Up is a modern, responsive website focused on creative design, clean layouts, and a smooth user experience across devices.',
-    cover: "/images/designer-up/cover.png",
+    cover: "/images/designer-up/cover.webp",
     liveUrl: 'https://ghezaalbahar-gif.github.io/Designer-Up/',
     liveLabel: 'View live site',
     meta: [
@@ -285,9 +285,9 @@ const rawProjects = [
       'This project helped me improve my frontend development skills and understand how to build a clean, responsive, and user-friendly website.',
     ],
     images: [
-      '/images/designer-up/1.png',
-      '/images/designer-up/2.png',
-      '/images/designer-up/3.png',
+      '/images/designer-up/1.webp',
+      '/images/designer-up/2.webp',
+      '/images/designer-up/3.webp',
       
     ],
   },
@@ -297,7 +297,7 @@ const rawProjects = [
     category: 'Team Project',
     description:
       'Netlinks Pricing is a clean, responsive website that presents service plans and pricing options in an organized layout, making it easy for users to compare features and choose the right plan.',
-    cover: "/images/netlinks-pricing/cover.png",
+    cover: "/images/netlinks-pricing/cover.webp",
     liveUrl: 'https://ghezaalbahar-gif.github.io/Netlinks-Pricing/',
     liveLabel: 'View live site',
     meta: [
@@ -342,9 +342,9 @@ const rawProjects = [
       'This project helped me improve my frontend development skills and understand how to present pricing information clearly and effectively.',
     ],
     images: [
-      '/images/netlinks-pricing/1.png',
-      '/images/netlinks-pricing/2.png',
-      '/images/netlinks-pricing/3.png',
+      '/images/netlinks-pricing/1.webp',
+      '/images/netlinks-pricing/2.webp',
+      '/images/netlinks-pricing/3.webp',
       
     ],
   },
@@ -354,7 +354,7 @@ const rawProjects = [
     category: 'HTML CSS practice',
     description:
       'Build Your Dream House is a web development project showcasing a clean, structured interface built to present content in an accessible and user-friendly way.',
-    cover: "/images/dream-house/cover.png",
+    cover: "/images/dream-house/cover.webp",
     liveUrl: 'https://ghezaalbahar-gif.github.io/Bootcamp-2/',
     liveLabel: 'View live site',
     meta: [
@@ -399,9 +399,9 @@ const rawProjects = [
       'This project helped me strengthen my frontend development skills and understand how to organize information-heavy websites effectively.',
     ],
     images: [
-      '/images/dream-house/1.png',
-      '/images/dream-house/2.png',
-      '/images/dream-house/3.png',
+      '/images/dream-house/1.webp',
+      '/images/dream-house/2.webp',
+      '/images/dream-house/3.webp',
     
       
     ],
@@ -412,7 +412,7 @@ const rawProjects = [
     category: 'HTML practice',
     description:
       'Co & Glow is a modern, visually engaging website focused on showcasing products through clean layouts, attractive imagery, and a user-friendly browsing experience.',
-    cover: "/images/co-and-glow/cover.png",
+    cover: "/images/co-and-glow/cover.webp",
     liveUrl: 'https://ghezaalbahar-gif.github.io/Built-to-Buy/',
     liveLabel: 'View live site',
     meta: [
@@ -457,9 +457,9 @@ const rawProjects = [
       'This project helped me improve my frontend development skills and understand the importance of visual consistency and responsive design.',
     ],
     images: [
-      '/images/co-and-glow/1.png',
-      '/images/co-and-glow/2.png',
-      '/images/co-and-glow/3.png',
+      '/images/co-and-glow/1.webp',
+      '/images/co-and-glow/2.webp',
+      '/images/co-and-glow/3.webp',
       
     ],
   },
