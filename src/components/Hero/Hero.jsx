@@ -47,26 +47,23 @@ export default function Hero() {
         </div>
       </div>
 
-      <div
-        aria-hidden="true"
-        className="hidden w-full md:mt-20 md:block xl:mt-[72px]"
-      >
+      <div aria-hidden="true" className="w-full md:mt-20 xl:mt-[72px]">
         <Marquee
           items={covers}
           getKey={(tile) => tile.key}
           gap={24}
           speed={42}
           fade
-          className="h-[300px] xl:h-[412px]"
+          className="h-[150px] md:h-[300px] xl:h-[412px]"
           renderItem={(tile) => (
             <img
               src={tile.cover}
               alt=""
-              width="1016"
-              height="938"
+              width="1366"
+              height="633"
               draggable="false"
               loading="lazy"
-              className="h-[300px] w-auto max-w-none rounded-2xl object-contain xl:h-[412px] xl:rounded-[16px]"
+              className="h-[150px] w-auto max-w-none rounded-2xl object-contain md:h-[300px] xl:h-[412px] xl:rounded-[16px]"
             />
           )}
         />
