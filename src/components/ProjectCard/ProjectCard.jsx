@@ -7,8 +7,8 @@ export default function ProjectCard({ project, priority = false }) {
         <img
           src={project.cover}
           alt={project.title}
-          width="1016"
-          height="938"
+          width="1366"
+          height="633"
           draggable="false"
           loading={priority ? 'eager' : 'lazy'}
           className="w-full object-contain transition-transform duration-700 ease-out group-hover:scale-[1.04]"

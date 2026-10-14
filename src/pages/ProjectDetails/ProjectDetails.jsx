@@ -25,8 +25,8 @@ function DetailImage({ src, alt }) {
         src={src}
         alt={alt}
         loading="lazy"
-        width="1536"
-        height="1024"
+        width="1366"
+        height="633"
         className=" w-full object-contain"
       />
     </Reveal>
@@ -112,8 +112,8 @@ export default function ProjectDetails() {
             <img
               src={project.cover}
               alt={`${project.title} cover`}
-              width="1016"
-              height="938"
+              width="1366"
+              height="633"
               className=" w-full object-contain"
             />
           </Reveal>
