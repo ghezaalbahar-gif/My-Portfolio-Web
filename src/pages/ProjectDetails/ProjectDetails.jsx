@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import ProjectCard from '../../components/ProjectCard/ProjectCard.jsx'
+import ProjectImage from '../../components/ProjectImage/ProjectImage.jsx'
 import Reveal from '../../components/Reveal/Reveal.jsx'
 import projectDetails from './ProjectDetailsData.js'
 import projects, { getProject } from '../../data/projectsData.js'
@@ -16,21 +17,6 @@ function Section({ title, children }) {
 
 function Prose({ children }) {
   return <p className="max-w-[700px] text-base leading-[1.6] text-ink/70 md:text-lg">{children}</p>
-}
-
-function DetailImage({ src, alt }) {
-  return (
-    <Reveal className=" overflow-hidden rounded-2xl bg-pill md:rounded-[20px]">
-      <img
-        src={src}
-        alt={alt}
-        loading="lazy"
-        width="1366"
-        height="633"
-        className=" w-full object-contain"
-      />
-    </Reveal>
-  )
 }
 
 export default function ProjectDetails() {
@@ -108,15 +94,7 @@ export default function ProjectDetails() {
 
       <section className="pb-16 md:pb-20 xl:pb-[96px]">
         <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-10">
-          <Reveal className=" overflow-hidden rounded-2xl bg-pill md:rounded-[20px]">
-            <img
-              src={project.cover}
-              alt={`${project.title} cover`}
-              width="1366"
-              height="633"
-              className=" w-full object-contain"
-            />
-          </Reveal>
+          <ProjectImage src={project.cover} alt={`${project.title} cover`} />
         </div>
       </section>
 
@@ -166,7 +144,7 @@ export default function ProjectDetails() {
                     <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
                   </a>
                 )}
-                {block.image && <DetailImage src={block.image} alt={`${project.title} detail`} />}
+                {block.image && <ProjectImage src={block.image} alt={`${project.title} detail`} />}
               </Section>
             ))}
           </div>
