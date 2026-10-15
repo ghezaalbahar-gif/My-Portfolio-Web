@@ -8,7 +8,7 @@ const rawProjects = [
     description:
       'A modern, responsive website inspired by Nexor, featuring a clean design, smooth scrolling animations, and elegant layouts. Built with React and Tailwind CSS to deliver a seamless and engaging user experience.',
     cover: "/images/nexor/cover.webp",
-    liveUrl: '',
+    liveUrl: 'https://ghezaalbahar-gif.github.io/Nexor-Landing-page/',
     liveLabel: 'View live site',
     meta: [
       { label: 'Type', value: 'Landing page' },
