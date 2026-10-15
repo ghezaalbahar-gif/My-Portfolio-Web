@@ -12,7 +12,7 @@ const covers = projects.slice(0, 4).map((project) => ({
 
 export default function Hero() {
   return (
-    <section className="flex min-h-[92vh] flex-col items-center justify-center gap-12 pb-16 pt-20 md:gap-[72px] xl:min-h-screen xl:gap-[88px] xl:pb-[124px] xl:pt-[72px]">
+    <section className="flex min-h-[92vh] flex-col items-center justify-center gap-12 pb-16 pt-28 md:gap-[72px] xl:min-h-screen xl:gap-[88px] xl:pb-[124px] xl:pt-[96px]">
       <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6">
         <div className="mx-auto flex max-w-[720px] flex-col items-center gap-7 text-center md:gap-8">
           <Reveal>
