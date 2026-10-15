@@ -2,7 +2,7 @@ const hero = {
   badge: 'Available for projects',
   title: 'Building clean, friendly interfaces for the web',
   subtitle:
-    'Front-End Development Trainee and aspiring UI/UX Designer from Kabul, turning what I learn into real, working websites.',
+    'Front-End Developer and aspiring UI/UX Designer from Kabul, turning what I learn into real, working websites.',
   primaryCta: { label: 'View my work', to: '/projects' },
   secondaryCta: {
     label: "Let's chat",
