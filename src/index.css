@@ -39,20 +39,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Scroll-triggered entrance (matches the reference's subtle fade-up) */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
-}
-
 /*
  * Infinite chains. The track holds N identical groups and shifts by exactly one
  * group width per loop, so the seam is invisible at any item count.
@@ -105,12 +91,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-
   .marquee {
     overflow-x: auto;
     scrollbar-width: none;

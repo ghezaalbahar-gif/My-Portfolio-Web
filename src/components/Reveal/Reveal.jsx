@@ -1,52 +1,31 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
+import { motion, useInView, useMotionValue, useReducedMotion, useSpring, useTransform } from 'motion/react'
 
-export default function Reveal({ as: Tag = 'div', className = '', delay = 0, children, ...rest }) {
+const TRAVEL = 28
+
+export default function Reveal({ className = '', delay = 0, children, ...rest }) {
   const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
+  const reduceMotion = useReducedMotion()
+  const inView = useInView(ref, { once: true, margin: '0px 0px -8% 0px' })
+  const progress = useMotionValue(0)
+  const spring = useSpring(progress, { stiffness: 180, damping: 24, mass: 0.9 })
+  const opacity = useTransform(spring, [0, 1], [0, 1])
+  const y = useTransform(spring, [0, 1], [TRAVEL, 0])
 
   useEffect(() => {
-    const node = ref.current
-    if (!node) return undefined
-
-    let observer = null
-    const reveal = () => {
-      setVisible(true)
-      if (observer) observer.disconnect()
-      window.removeEventListener('scroll', onScroll)
-    }
-
-    const onScroll = () => {
-      const rect = node.getBoundingClientRect()
-      if (rect.top < window.innerHeight * 0.92) reveal()
-    }
-
-    if (typeof IntersectionObserver !== 'undefined') {
-      observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) reveal()
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -8% 0px' },
-      )
-      observer.observe(node)
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll()
-
-    return () => {
-      if (observer) observer.disconnect()
-      window.removeEventListener('scroll', onScroll)
-    }
-  }, [])
+    if (!inView || reduceMotion) return undefined
+    const timer = setTimeout(() => progress.set(1), delay)
+    return () => clearTimeout(timer)
+  }, [inView, delay, reduceMotion, progress])
 
   return (
-    <Tag
+    <motion.div
       ref={ref}
-      className={`reveal ${visible ? 'is-visible' : ''} ${className}`}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      className={className}
+      style={reduceMotion ? undefined : { opacity, y }}
       {...rest}
     >
       {children}
-    </Tag>
+    </motion.div>
   )
 }
