@@ -463,6 +463,122 @@ const rawProjects = [
       
     ],
   },
+  {
+    slug: 'elearna',
+    title: 'Elearna Learning Platform',
+    category: 'Multi-page React app',
+    description:
+      'Elearna is an online learning platform rebuilt in React and Tailwind CSS: a dark teal course catalogue with category grids, filterable course cards, testimonials and separate pages for courses, categories, blog, career and contact.',
+    cover: '/images/elearna/cover.jpg',
+    liveUrl: 'https://elearna-faqiri.vercel.app/',
+    liveLabel: 'View live site',
+    meta: [
+      { label: 'Type', value: 'Learning platform' },
+      { label: 'Role', value: 'Design & development' },
+      { label: 'Stack', value: 'React.js, Vite, Tailwind CSS, React Router' },
+      { label: 'Status', value: 'Live on Vercel' },
+    ],
+    overview: [
+      'Elearna is a multi-page online learning platform I rebuilt with React and Tailwind CSS, matching a published course-template design section by section. React Router turns it into a real app: every course card opens its own detail page, and the navigation dropdowns lead to courses, categories, blog, career and contact pages.',
+      'The homepage carries the whole journey — a dark teal hero, a trusted-by logo band, seven top categories, a course grid with working filter tabs, a testimonials band with counters, top programs and a closing call to action. The typography pairs Outfit with Space Grotesk, and the yellow accent is used only for prices, ratings and highlights.',
+    ],
+    challenge: {
+      paragraphs: [
+        'Rebuilding a finished design is a measuring job. The reference changes its grids, font sizes and section order at three different breakpoints, so matching it meant checking each width separately instead of trusting one desktop view.',
+      ],
+      bullets: [
+        'Pixel-perfect sections: reproducing the original spacing, corner radii and layered shadows band by band.',
+        'Breakpoints: the reference reflows at 992px, 768px and 480px, and every one of those needed its own rules.',
+        'Routing: turning one landing page into a multi-page app with nested course and category routes.',
+        'Hover-only UI: dropdown menus, card movement and the price badges only appear on pointer interaction, so each state had to be rebuilt and checked on its own.',
+      ],
+    },
+    approach: {
+      paragraphs: [
+        'I split the page into one component per band, kept all copy and course lists in a matching data file, and compared my render against the live reference at every breakpoint rather than judging by eye.',
+      ],
+      points: [
+        {
+          title: 'One component per section',
+          text: 'Each band of the homepage is its own component with its own data file, so no markup carries content that a future edit would have to hunt for.',
+        },
+        {
+          title: 'Measured, not guessed',
+          text: 'I checked spacing and type sizes against the live original at desktop and phone widths, which is where most of the small corrections came from.',
+        },
+        {
+          title: 'Shared design tokens',
+          text: 'Colours, font sizes and radii live in the Tailwind theme, so the teal, yellow and rounded cards stay consistent across every page.',
+        },
+      ],
+    },
+    learned: [
+      'Elearna taught me how to work from a design that already exists: how to read a layout structure, keep to its rhythm, and still leave the code organised enough to add pages later. I also got real practice with routing, since the course and category pages only make sense as a nested route tree.',
+    ],
+    images: [
+      '/images/elearna/1.jpg',
+      '/images/elearna/2.jpg',
+      '/images/elearna/3.jpg',
+    ],
+  },
+  {
+    slug: 'dr-khalid-khan-zadran',
+    title: 'Dr. Khalid Khan Zadran',
+    category: 'Trilingual medical website',
+    description:
+      'A practice website for Dr. Khalid Khan Zadran, consultant neurosurgeon and brain & spine specialist in Kabul. It explains what he treats, which operations he performs, and how to request an appointment — in English, Pashto and Dari, including full right-to-left layout.',
+    cover: '/images/dr-khalid-khan-zadran/cover.jpg',
+    liveUrl: 'https://ghezaalbahar-gif.github.io/Dr.Khalid-Khan-Zadran/',
+    liveLabel: 'View live site',
+    meta: [
+      { label: 'Type', value: 'Practice website' },
+      { label: 'Role', value: 'Design & development' },
+      { label: 'Stack', value: 'React.js, Vite, Tailwind CSS, i18next' },
+      { label: 'Status', value: 'Live on GitHub Pages' },
+    ],
+    overview: [
+      'This site presents a neurosurgery practice: focus areas for brain, spine, nerves and head injury, four consultation services, a list of the operations performed, the steps from first visit to follow-up, and an appointment request. Everything a patient needs is reachable from the navigation bar.',
+      'It ships in three languages — English, Pashto and Dari — and the two local ones run right-to-left. The language and direction are written to the page before the first paint, so an RTL visit never flashes a left-to-right layout, and all copy is loaded through i18next translation files.',
+    ],
+    challenge: {
+      paragraphs: [
+        'The hard part was not the design but the direction. A right-to-left version of the same page is a mirrored page, and every part of it had to be checked in both directions.',
+      ],
+      bullets: [
+        'Mirrored layout: margins, arrows, icons, borders and card order all had to flip correctly for Pashto and Dari.',
+        'Two type systems: a serif display face for English and a separate Arabic-script face for RTL, both kept at readable sizes and line heights.',
+        'Medical content: procedures and consultations described plainly, with no invented statistics or claims I could not back up.',
+        'Language parity: the same section had to look deliberate in all three languages, not translated at the last minute.',
+      ],
+    },
+    approach: {
+      paragraphs: [
+        'I treated the three languages as one specification: every string went into a translation file first, and each section was laid out so that flipping the direction required no special cases.',
+      ],
+      points: [
+        {
+          title: 'Language-first structure',
+          text: 'All copy lives in translation files, so adding a language is a data change rather than a markup change.',
+        },
+        {
+          title: 'Logical properties',
+          text: 'Spacing and alignment use direction-aware CSS properties, which is why the RTL layout mirrors cleanly instead of breaking.',
+        },
+        {
+          title: 'Calm, clinical palette',
+          text: 'Navy and soft blue with hairline dividers, chosen so the page reads as a medical practice rather than a startup landing page.',
+        },
+      ],
+    },
+    learned: [
+      'This project showed me that internationalisation is a layout problem, not only a translation problem. Building the same page in two reading directions made me rethink spacing, alignment and typography from the ground up — and it is the first project of mine I would hand to a real patient.',
+    ],
+    images: [
+      '/images/dr-khalid-khan-zadran/1.jpg',
+      '/images/dr-khalid-khan-zadran/2.jpg',
+      '/images/dr-khalid-khan-zadran/3.jpg',
+    ],
+  },
 ]
 
 const projects = rawProjects.map((project) => ({
