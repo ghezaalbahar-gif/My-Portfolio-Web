@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom'
 
 export default function ProjectCard({ project, priority = false }) {
+  const Wrapper = project.external ? 'a' : Link
+  const wrapperProps = project.external
+    ? { href: project.liveUrl, target: '_blank', rel: 'noopener noreferrer' }
+    : { to: `/projects/${project.slug}` }
+
   return (
-    <Link to={`/projects/${project.slug}`} className="group flex flex-col gap-8">
+    <Wrapper {...wrapperProps} className="group flex flex-col gap-8">
       <div className="relative overflow-hidden rounded-2xl bg-pill md:rounded-[20px]">
         <img
           src={project.cover}
@@ -20,6 +25,6 @@ export default function ProjectCard({ project, priority = false }) {
         </h3>
         <p className="text-base text-black/50">{project.category}</p>
       </div>
-    </Link>
+    </Wrapper>
   )
 }
