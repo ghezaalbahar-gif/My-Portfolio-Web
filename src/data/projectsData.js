@@ -2,6 +2,66 @@ import { asset } from './asset.js'
 
 const rawProjects = [
   {
+    slug: 'khidmat',
+    title: 'Khidmat',
+    category: 'Service booking marketplace',
+    description:
+      "Khidmat is a service booking marketplace for Kabul. Customers search trusted plumbers, cleaners, electricians, painters, carpenters and AC technicians by area and price, while professionals publish their own services and handle booking requests in one dashboard. It is a React single page app with four hash-routed views, live on Vercel.",
+    cover: '/images/khidmat/cover.jpg',
+    liveUrl: 'https://khidmat-web.vercel.app/#/professionals',
+    liveLabel: 'View live site',
+    meta: [
+      { label: 'Type', value: 'Marketplace web app' },
+      { label: 'Role', value: 'Design & development' },
+      { label: 'Stack', value: 'React.js, Vite, Tailwind CSS' },
+      { label: 'Status', value: 'Live on Vercel' },
+    ],
+    overview: [
+      'Khidmat connects households in Kabul with local professionals across six categories: home cleaning, plumbing, electrical, painting, carpentry and AC repair. The listing page carries a search field plus area, price and sort filters, and each card shows the work, the neighbourhood and the starting price.',
+      'The same app holds the other side of the marketplace. The professionals page explains how to join, publish services, set prices in AFN and manage incoming requests, and the bookings view follows a job from request to review.',
+      'It ships as one React build with four hash-routed views (Home, Find a service, For professionals, My bookings), so every section keeps its own shareable address without any server rendering.',
+    ],
+    challenge: {
+      paragraphs: [
+        'The hardest part was presenting a finished product while nothing is actually stored. There is no database connection yet, so bookings, profiles and reviews cannot persist between visits.',
+      ],
+      bullets: [
+        'Naming the gap instead of hiding it: a persistent banner states that Khidmat is running without a database connection, so bookings and profiles cannot be saved.',
+        'Keeping the hero counters honest. Listed pros, jobs and average rating read from live data, so in demo mode they show zero rather than a padded number.',
+        'Labelling placeholder content, such as the sample review that shows how feedback from a completed job will look on a profile.',
+        'Serving two audiences in one flow without confusing either of them: customers search and request a quote, professionals join and manage requests.',
+        'Fitting a verification badge, rating, review count, neighbourhood, reply time, category and starting price into one card without crowding it.',
+      ],
+    },
+    approach: {
+      paragraphs: [
+        'I styled the interface with Tailwind CSS on a deep green palette with amber accents, Manrope for all interface text and a Fraunces serif reserved for testimonial quotes, and I moved between the four sections with hash-based routing.',
+      ],
+      points: [
+        {
+          title: 'Two-sided structure',
+          text: 'Customer views handle search, filters and quote requests, while the professionals page walks through joining, publishing services and managing bookings in four numbered steps.',
+        },
+        {
+          title: 'Design tokens over one-off values',
+          text: 'Brand, ink, ember and hairline colours are defined once and reused, so buttons, chips, cards and the demo banner stay aligned across every view.',
+        },
+        {
+          title: 'Local detail',
+          text: 'Prices are written in AFN and jobs are placed in Kabul neighbourhoods such as Karte Parwan, Shahr-e-Naw, Wazir Akbar Khan, Taimani and Macroyan, so the listings read like a real city instead of a template.',
+        },
+      ],
+    },
+    learned: [
+      'Khidmat taught me how to design for two different audiences inside one product, how to keep a demo honest by labelling sample data instead of faking numbers, and how much a small set of tokens and one type pairing do for consistency across a multi-view app.',
+    ],
+    images: [
+      '/images/khidmat/1.jpg',
+      '/images/khidmat/2.jpg',
+      '/images/khidmat/3.jpg',
+    ],
+  },
+  {
     slug: 'nexor',
     title: 'Nexor landing page',
     category: 'Web design',
