@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
+import Cursor from './components/Cursor/Cursor.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Navbar from './components/Navbar/Navbar.jsx'
 import useSmoothScroll from './hooks/useSmoothScroll.js'
@@ -24,6 +25,7 @@ export default function App() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-ink">
       <ScrollToTop />
+      <Cursor />
       <Navbar />
       <main className="flex-1">
         <Routes>

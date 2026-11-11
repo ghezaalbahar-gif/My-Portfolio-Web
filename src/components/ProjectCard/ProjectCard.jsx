@@ -7,7 +7,7 @@ export default function ProjectCard({ project, priority = false }) {
     : { to: `/projects/${project.slug}` }
 
   return (
-    <Wrapper {...wrapperProps} className="group flex flex-col gap-8">
+    <Wrapper {...wrapperProps} data-cursor="card" className="group flex flex-col gap-8">
       <div className="relative overflow-hidden rounded-2xl bg-pill md:rounded-[20px]">
         <img
           src={project.cover}
